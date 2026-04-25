@@ -1,0 +1,130 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Gilroy", sans-serif;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(155, 184, 155);
+}
+
+#panel {
+    position: relative; /* Zaroori hai taaki restart screen iske hisab se center ho */
+    overflow: hidden;
+    width: 80%;
+    height: 90%;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+#ptop {
+    padding: 0 20%;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    color: white;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(72, 104, 72);
+}
+
+.elem {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.elem h2 {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.box {
+    color: rgb(18, 119, 57);
+    font-weight: 700;
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 6px;
+}
+
+#pbtm {
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    padding: 20px;
+    height: calc(100% - 100px);
+}
+
+.bubble {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(72, 104, 72);
+    color: white;
+    border-radius: 50%;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.bubble:hover {
+    cursor: pointer;
+    background-color: rgb(40, 60, 40);
+    transform: scale(1.1);
+}
+
+/* --- Restart Screen Styling --- */
+.restartcontainer {
+    display: none; /* Default me band */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 50px rgba(0,0,0,0.3);
+    z-index: 100;
+    width: 300px;
+}
+
+.gameover {
+    color: #e74c3c;
+    font-size: 40px;
+    text-align: center;
+}
+
+#restartBtn {
+    padding: 12px 25px;
+    background-color: rgb(72, 104, 72);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#restartBtn:hover {
+    background-color: rgb(40, 60, 40);
+}
